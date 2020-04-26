@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="droids">
+  <p>droids:</p>
+  <div *ngFor="let droid of droids">
+    <p>droid:</p>
+    <p>name: {{droid.name}} </p>
+    <p>id: {{droid.id}} </p>
+    <p>friends:</p>
+    <div *ngFor="let friend of droid.friends">
+      <p>friend:</p>
+      <p>name: {{friend.name}} </p>
+      <p>id: {{friend.id}} </p>
+
+
+    </div>
+
+  </div>
+</div>
